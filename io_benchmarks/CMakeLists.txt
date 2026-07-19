@@ -15,8 +15,8 @@ add_compile_options(
 )
 
 # mmap benchmark
-add_executable(bench_mmap bench_mmap.cpp)
+add_executable(bench_mmap benchmarks/bench_mmap.cpp)
 
 # io_uring benchmark
-add_executable(bench_io_uring bench_io_uring.cpp)
+add_executable(bench_io_uring benchmarks/bench_io_uring.cpp)
 target_link_libraries(bench_io_uring uring)     # links liburing
