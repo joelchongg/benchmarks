@@ -7,8 +7,8 @@
 #include <unistd.h>
 #include <vector>
 
-constexpr size_t BLOCK_SZ = 256 * 1024;
-constexpr unsigned int QUEUE_DEPTH = 32;
+constexpr size_t BLOCK_SZ = 4 * 1024 * 1024;
+constexpr unsigned int QUEUE_DEPTH = 2;
 constexpr size_t TOTAL_BUFFER_SIZE = BLOCK_SZ * QUEUE_DEPTH;
 
 struct RequestContext {
