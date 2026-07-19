@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
 
     size_t total_bytes_read = 0;
     size_t start_sqes_idx = QUEUE_DEPTH;
-    std::vector<uint8_t> histogram(256, 0);
+    std::vector<size_t> histogram(256, 0);
     while (total_bytes_read < st.st_size) {
         struct io_uring_cqe* cqes;
 
