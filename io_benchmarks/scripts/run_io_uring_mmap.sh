@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# Prerequisites:
+# Dependencies should be installed, namely liburing and perf
+# Scripts should be ran from the io_benchmarks directory
+
 # below is the script used to test io_uring VS mmap on processing a huge file sequentially
-# this script should be run from the io_benchmarks directory
 # you may wish to direct it to a .txt file under the results directory.
 # For example, ./scripts/run_io_uring_mmap.sh > io_uring_mmap_results.txt
 
