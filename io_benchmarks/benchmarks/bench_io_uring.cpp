@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <cstring>
 #include <fcntl.h>
+#include <iostream>
 #include <liburing.h>
 #include <stdexcept>
 #include <sys/stat.h>
@@ -107,6 +108,12 @@ int main(int argc, char* argv[]) {
             io_uring_submit(&ring);
             total_outstanding += to_submit;
         }
+    }
+
+    // used to confirm correctness against other benchmarks
+    std::cout << "Histogram results:\n<Value>:<Count>\n";
+    for (int i = 0; i < 256; ++i) {
+        std::cout << i << " : " << histogram[i] << '\n';
     }
 
     io_uring_queue_exit(&ring);
